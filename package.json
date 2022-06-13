@@ -1,6 +1,6 @@
 {
   "name": "@einsenundnullen/react-nextjs-consentmanager",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Library to handle cookie consent management in nextjs",
   "author": "einsenundnullen",
   "license": "MIT",
