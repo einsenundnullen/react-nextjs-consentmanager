@@ -2,7 +2,7 @@
 
 > Library to handle cookie consent in React (specifically nextjs)
 
-[![NPM](https://img.shields.io/npm/v/react-nextjs-consentmanager.svg)](https://www.npmjs.com/package/@einsenundnullen/react-nextjs-consentmanager) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/@einsenundnullen/react-nextjs-consentmanager.svg)](https://www.npmjs.com/package/@einsenundnullen/react-nextjs-consentmanager) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
