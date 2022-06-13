@@ -4,7 +4,8 @@ import {
   CookieType,
   I18nKeys
 } from '@einsenundnullen/react-nextjs-consentmanager'
-import '@einsenundnullen/react-nextjs-consentmanager/dist/index.css'
+import '@einsenundnullen/react-nextjs-consentmanager/index.css'
+
 import React from 'react'
 
 const App = () => {

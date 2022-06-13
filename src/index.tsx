@@ -2,7 +2,6 @@ import { boundMethod } from 'autobind-decorator'
 import clsx from 'clsx'
 import * as React from 'react'
 import { IoFingerPrintOutline } from 'react-icons/io5'
-import Toggle from 'react-toggle'
 import Cookies from 'universal-cookie'
 import './styles.css'
 import { onlyUnique } from './util'
@@ -91,15 +90,17 @@ const SettingRow: React.FC<{
           <h4>{name}</h4>
           <h5>{provider}</h5>
         </div>
-        <div className='rncm__setting-row-state'>
-          {enabled ? i18n[I18nKeys.ON] : i18n[I18nKeys.OFF]}
-        </div>
         <div className='rncm__setting-row-toggle'>
-          <Toggle
+          <input
+            type='checkbox'
+            id={`toggle_${type}`}
             disabled={type === CookieType.ESSENTIAL}
-            checked={enabled}
             onChange={onToggle}
+            checked={enabled}
           />
+          <label htmlFor={`toggle_${type}`}>
+            {enabled ? i18n[I18nKeys.ON] : i18n[I18nKeys.OFF]}
+          </label>
         </div>
       </div>
       <p>{reason}</p>
