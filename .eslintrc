@@ -2,14 +2,15 @@
   "parser": "@typescript-eslint/parser",
   "extends": [
     "standard",
-    "standard-react",
+    "prettier",
     "plugin:prettier/recommended",
-    "prettier/standard",
-    "prettier/react",
-    "plugin:@typescript-eslint/eslint-recommended"
+    "eslint:recommended",
+    "plugin:jsx-a11y/recommended"
   ],
   "env": {
-    "node": true
+    "browser": true,
+    "node": true,
+    "jasmine": true
   },
   "parserOptions": {
     "ecmaVersion": 2020,
@@ -20,7 +21,7 @@
   },
   "settings": {
     "react": {
-      "version": "16"
+      "version": "18"
     }
   },
   "rules": {
@@ -30,6 +31,6 @@
     "react/jsx-fragments": 0,
     "react/no-unused-prop-types": 0,
     "import/export": 0,
-    "no-unused-vars":"off"
+    "no-unused-vars": "off"
   }
 }

@@ -397,10 +397,19 @@ export class ConsentManager extends React.Component<
   }
 
   renderHiddenView() {
+    const handleKeyUp = (e: React.KeyboardEvent) => {
+      if (e.code === 'Enter') {
+        this.handleShowMain()
+      }
+    }
+
     return (
       <div
         className='rncm__root rncm__root-hidden'
         onClick={this.handleShowMain}
+        onKeyUp={handleKeyUp}
+        role='button'
+        tabIndex={0}
       >
         <IoFingerPrintOutline />
       </div>
