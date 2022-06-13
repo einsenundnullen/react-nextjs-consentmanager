@@ -1,0 +1,71 @@
+{
+  "name": "@einsenundnullen/react-nextjs-consentmanager",
+  "version": "1.0.0",
+  "description": "Library to handle cookie consent management in nextjs",
+  "author": "einsenundnullen",
+  "license": "MIT",
+  "repository": "einsenundnullen/react-nextjs-consentmanager",
+  "main": "dist/index.js",
+  "module": "dist/index.modern.js",
+  "source": "src/index.tsx",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "build": "microbundle-crl --no-compress --css-modules false  --format modern,cjs",
+    "start": "microbundle-crl watch --no-compress --css-modules false --format modern,cjs",
+    "prepare": "run-s build",
+    "test": "run-s test:unit test:lint test:build",
+    "test:build": "run-s build",
+    "test:lint": "eslint .",
+    "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
+    "test:watch": "react-scripts test --env=jsdom",
+    "predeploy": "cd example && npm install && npm run build",
+    "deploy": "gh-pages -d example/build"
+  },
+  "peerDependencies": {
+    "react": "^17.x"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^14.2.0",
+    "@types/jest": "^28.1.1",
+    "@types/node": "^17.0.42",
+    "@types/react": "^18.0.12",
+    "@types/react-dom": "^18.0.5",
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
+    "babel-eslint": "^10.0.3",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.17.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-config-standard-react": "^11.0.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-standard": "^4.1.0",
+    "gh-pages": "^4.0.0",
+    "microbundle-crl": "^0.13.11",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.6.2",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-scripts": "^5.0.1",
+    "typescript": "^4.7.3"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@types/react-toggle": "^4.0.3",
+    "autobind-decorator": "^2.4.0",
+    "clsx": "^1.1.1",
+    "react-icons": "^4.4.0",
+    "react-toggle": "^4.1.2",
+    "universal-cookie": "^4.0.4"
+  }
+}
